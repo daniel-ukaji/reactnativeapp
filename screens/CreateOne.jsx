@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TextInput } from 'react-native'
+import { View, Text, SafeAreaView, TextInput, StyleSheet } from 'react-native'
 import React, { useState } from 'react'
 import { Button } from 'react-native';
 import { TouchableOpacity } from 'react-native';
@@ -9,9 +9,15 @@ import { Ionicons } from '@expo/vector-icons';
 const CreateOne = ({ navigation }) => {
 
   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
 
   const handleEmailChange = (text) => {
     setName(text);
+  };
+
+  const handleNameChange = (text) => {
+    setEmail(text);
   };
 
   const handleLogin = () => {
@@ -26,36 +32,87 @@ const CreateOne = ({ navigation }) => {
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Ionicons name='arrow-back' size={30} color="black" />
       </TouchableOpacity>
-      <Text className="mt-10 font-bold text-2xl mb-2">Start sending and receiving cash globally</Text>
-      <Text>Already have an account? Login</Text>
+      
 
-      <View className="flex flex-col mt-10 justify-between">
+      <View className="flex flex-col mt-36 justify-between">
         <View className=" justify-start">
           <TextInput
             value={name}
             onChangeText={handleEmailChange}
-            placeholder="First and Last Name"
+            placeholder="Email"
             autoCapitalize="none"
+            placeholderTextColor="black" // Set the color of the placeholder text
             className="p-5 border rounded-md"
           />
+
+          <TextInput
+            value={email}
+            onChangeText={handleNameChange}
+            placeholder="Password"
+            autoCapitalize="none"
+            placeholderTextColor="black" // Set the color of the placeholder text
+            className="p-5 border rounded-md mt-5"
+            secureTextEntry={true} // Set this prop to true to hide the entered text
+          />
           
-          <View className="flex flex-row mt-4">
-            <Text className="text-gray-600">By proceeding you agree to our</Text>
-            <TouchableOpacity><Text> Terms of Service and </Text></TouchableOpacity>
-          </View>
-          <TouchableOpacity><Text>Privacy policy </Text></TouchableOpacity>
         </View>
         <View className="mt-14">
           <TouchableOpacity 
             onPress={() => navigation.navigate('CreateTwo')}
-            className="border flex p-4 rounded-xl bg-black"
+            className="flex p-5 rounded-xl bg-[#9E9E9E]"
           >
-            <Text className="text-center text-white" >Continue</Text>
+            <Text className="text-center font-bold text-black" >Login</Text>
           </TouchableOpacity>
         </View>
+
+        <View style={styles.container} className="mt-10">
+          <View style={styles.line} />
+          <Text style={styles.orText}>OR</Text>
+          <View style={styles.line} />
+        </View>
       </View>
+
+      <View className="mt-10">
+          <TouchableOpacity 
+            onPress={() => navigation.navigate('CreateTwo')}
+            className="flex p-5 rounded-xl bg-[#9E9E9E]"
+          >
+            <Text className="text-center font-bold text-white" >Continue With Facebook</Text>
+          </TouchableOpacity>
+        </View>
+        <View className="mt-5">
+          <TouchableOpacity 
+            onPress={() => navigation.navigate('CreateTwo')}
+            className="flex p-5 rounded-xl bg-[#9E9E9E]"
+          >
+            <Text className="text-center font-bold text-white" >Continue With Google</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View className="mt-10 flex justify-center items-center">
+          <TouchableOpacity onPress={() => navigation.navigate('CreateTwo')}>
+            <Text>Don't have an account? SignUp</Text>
+          </TouchableOpacity>
+        </View>
     </SafeAreaView>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  line: {
+    flex: 1,
+    height: 2,
+    backgroundColor: 'black',
+  },
+  orText: {
+    marginHorizontal: 10,
+    color: 'black',
+  },
+});
 
 export default CreateOne
