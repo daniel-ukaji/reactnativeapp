@@ -42,7 +42,7 @@ const CreateTwo = ({ navigation }) => {
   gave_consent: true,
   is_shareable: true,
   user: {
-    client_user_id: "yourdbid3b24137",
+    client_user_id: "your-db-id3b24115",
     email_address: email,
     phone_number: "+19876543212",
     date_of_birth: "1975-01-18",
@@ -96,37 +96,6 @@ const CreateTwo = ({ navigation }) => {
     }
     }
   };
-
-  // const handleSuccess = (success: LinkSuccess) => {
-  //   // Handle the success event here
-  //   console.log('Plaid Link success:', success);
-
-  //   // You can access information about the linked account
-  //   const { public_token, metadata } = success;
-  //   const { institution } = metadata;
-
-  //   // Perform actions with the linked account data
-  //   // For example, you can send the public_token to your server
-  //   // for further processing or store it in your app's state.
-  // };
-
-  // const handleExit = (exit: LinkExit) => {
-  //   // Handle the exit event here
-  //   console.log('Plaid Link exit:', exit);
-
-  //   // You can check the exit reason to determine why the user exited
-  //   if (exit.error != null) {
-  //     // Handle the case where an error occurred during the link process
-  //     console.log('Plaid Link error:', exit.error);
-  //     // You can display an error message to the user or take other actions.
-  //   } else if (exit.metadata.status === 'user_exit') {
-  //     // Handle the case where the user intentionally exited (e.g., canceled)
-  //     console.log('User canceled the link process');
-  //     // You can provide a message or perform cleanup actions.
-  //   } else {
-  //     // Handle other exit reasons if needed
-  //   }
-  // };
 
   return (
     <SafeAreaView className="m-5">
@@ -194,7 +163,7 @@ const CreateTwo = ({ navigation }) => {
       >
         <Text>Add Account</Text>
     </PlaidLink> */}
-    <YourComponent />
+    {/* <YourComponent /> */}
       </View>
 
       <View className="mt-5" >

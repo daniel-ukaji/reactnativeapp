@@ -90,35 +90,7 @@ import {
               </Text>
             </TouchableOpacity>
           </View>
-        {/* {currentIndex === 3 ? (
-          <View className="px-5 py-10 flex-row justify-between">
-            <TouchableOpacity
-              className="py-4 px-5 w-[48%] rounded-xl items-center border border-gray-700"
-              onPress={() => navigate("Login")}
-            >
-              <Text className="font-poppins font-semibold text-white">Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              className="py-4 px-5 w-[48%] rounded-xl items-center bg-gray-700"
-              onPress={() => navigate("RegisterOne")}
-            >
-              <Text className="font-poppins font-semibold text-white">
-                Register
-              </Text>
-            </TouchableOpacity>
-          </View>
-        ) : (
-          <View className="px-5 py-10">
-            <TouchableOpacity
-              className="py-6 px-5 w-full rounded-full items-center bg-[#9E9E9E]"
-              onPress={scrollTo}
-            >
-              <Text className="font-poppins text-md font-bold text-black">
-              Create Account
-              </Text>
-            </TouchableOpacity>
-          </View>
-        )} */}
+        
         <View className="items-center my-7">
           <Paginator data={slides} scrollX={scrollX} />
         </View>

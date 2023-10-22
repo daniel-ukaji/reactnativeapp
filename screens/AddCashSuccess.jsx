@@ -9,7 +9,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Check from '../images/Check.png'
 import { Image } from 'react-native';
 
-const CreateFive = ({ navigation }) => {
+const AddCashSuccess = ({ navigation }) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -38,11 +38,11 @@ const CreateFive = ({ navigation }) => {
       <Image source={Check} className="max-w-2xl mx-auto" />
 
       <View className="mt-10">
-        <Text className="text-center text-xl font-bold">Verified!</Text>
+        <Text className="text-center text-xl font-bold">Cash added!</Text>
       </View>
 
       <View className="flex justify-center items-center mt-10 w-3/4 mx-auto">
-        <Text className="text-center font-bold">Your email has been verified successfully</Text>
+        <Text className="text-center">You have successfully requested <Text className="font-bold">$5000</Text> to your wallet</Text>
       </View>
           
         <View className="mt-10">
@@ -61,4 +61,4 @@ const CreateFive = ({ navigation }) => {
   )
 }
 
-export default CreateFive
+export default AddCashSuccess

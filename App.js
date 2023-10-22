@@ -20,6 +20,12 @@ import WalletPage from './screens/WalletPage';
 import CreateOne from './screens/CreateOne';
 import CreateTwo from './screens/CreateTwo';
 import WebViewComponent from './screens/TestWebView';
+import Cards from './screens/Cards';
+import LinkCard from './screens/LinkCard';
+import AddCash from './screens/AddCash';
+import AddCashSuccess from './screens/AddCashSuccess';
+import FinishCard from './screens/FInishCard';
+import Activity from './screens/Activity';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -141,6 +147,36 @@ export default function App() {
         <Stack.Screen
           name="CreateTwo"
           component={CreateTwo}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Cards"
+          component={Cards}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="AddCash"
+          component={AddCash}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="AddCashSuccess"
+          component={AddCashSuccess}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="FinishCard"
+          component={FinishCard}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Activity"
+          component={Activity}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="LinkCard"
+          component={LinkCard}
           options={{ headerShown: false }}
         />
         <Stack.Screen
